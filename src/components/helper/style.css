@@ -1,0 +1,77 @@
+.confirm {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: end;
+}
+
+.confirm_sm {
+  background-color: #fff;
+  height: 50vh;
+  width: 100%;
+  padding: 30px 10px 10px;
+  position: relative;
+}
+
+.close_confirm {
+  position: absolute;
+  top: 0;
+}
+
+.close_confirm button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.confirm_sm p {
+  font-size: 0.8rem;
+}
+.btn_pay {
+  padding: 0.5rem;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  background-color: #212529;
+  color: #fff;
+}
+
+.my-class-name {
+  width: 70%;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+}
+
+.notify_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+}
+.notify_sm {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.notify_sm button {
+  background-color: #212529;
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 5px;
+}

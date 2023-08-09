@@ -1,0 +1,127 @@
+const axios = require("axios");
+
+function getPhoneNumberCarrier(phoneNumber) {
+  const API_KEY = "YOUR_API_KEY"; // Replace with your Numverify API key
+
+  const numverifyEndpoint = `http://apilayer.net/api/validate?access_key=${API_KEY}&number=${phoneNumber}&country_code=NG&format=1`;
+
+  return axios
+    .get(numverifyEndpoint)
+    .then((response) => {
+      const { data } = response;
+
+      if (data.valid && data.carrier) {
+        return data.carrier;
+      } else {
+        return "Unknown";
+      }
+    })
+    .catch((error) => {
+      console.error("Error:", error.message);
+      return "Error";
+    });
+}
+
+// Usage example
+var phoneNumber = "+2348123456789"; // Replace with the phone number to check
+
+getPhoneNumberCarrier(phoneNumber)
+  .then((carrier) => {
+    console.log(`Carrier: ${carrier}`);
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
+
+<Formik
+  initialValues={{
+    mobileNetwork: "",
+    dataType: "",
+    phoneNumber: "",
+    amount: "",
+  }}
+  validationSchema={Yup.object({
+    mobileNetwork: Yup.string()
+      .oneOf(["1", "2", "3", "4"], "Invalid Mobile Network")
+      .required("Required"),
+    dataType: Yup.string()
+      .oneOf(["1", "2", "3"], "Invalid Data Type")
+      .required("Required"),
+    phoneNumber: Yup.string()
+      .matches(phoneRegExp, "Phone number is not valid")
+      .required("Required"),
+    amount: Yup.number().positive().required("Require").min(3),
+    // password: Yup.string().required("Required"),
+  })}
+  onSubmit={(values, { setSubmitting }) => {
+    submitHandle(values);
+    setTimeout(() => {
+      // alert(JSON.stringify(values, null, 2));
+      setSubmitting(false);
+    }, 400);
+  }}
+>
+  <Form>
+    <div className="row row-cols-md-2 row-cols-sm-1 row-cols-1">
+      <div className="col">
+        <MySelect name="mobileNetwork">
+          <option value="">Network</option>
+          <option value="1">MTN</option>
+          <option value="2">GLO</option>
+          <option value="3">AIRTEL</option>
+          <option value="4">9MOBILE</option>
+        </MySelect>
+      </div>
+
+      <div className="col">
+        <MySelect name="dataType">
+          <option value="">Data Type</option>
+          <option value="1">CORPORATE GIFTING</option>
+          <option value="2">GIFTING</option>
+          <option value="3">SME</option>
+        </MySelect>
+      </div>
+
+      <div className="col">
+        <MySelect name="dataType">
+          {MtnCorporateGifting.map(({ id, name, price }) => (
+            <option value="" key={id}>
+              {name} @ &#8358;{price}
+            </option>
+          ))}
+        </MySelect>
+      </div>
+
+      <div className="col">
+        <MyTextInput
+          name="phoneNumber"
+          type="tel"
+          inputMode="tel"
+          placeholder="Number e.g 0813 000 0000"
+          autoComplete="off"
+        />
+      </div>
+
+      <div className="col">
+        <MyTextInput
+          name="amount"
+          type="text"
+          placeholder="Amount e.g 100, 200"
+          autoComplete="off"
+        />
+      </div>
+
+      <div className="col">
+        <div className="spin_container">
+          <button
+            //   disabled={loading ? true : null}
+            type="submit"
+            className="btn_pays"
+          >
+            Purchase
+          </button>
+        </div>
+      </div>
+    </div>
+  </Form>
+</Formik>;

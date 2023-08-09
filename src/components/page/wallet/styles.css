@@ -1,0 +1,240 @@
+.btn_container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.btn_container a {
+  border: none;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  margin: 0 3px;
+  background-color: #06152f;
+  color: #fff;
+  text-decoration: none;
+  padding: 1px 10px;
+}
+
+.btn_container a:hover {
+  background-color: #233885;
+}
+
+.the_table {
+  background-color: transparent !important;
+  font-size: 0.8rem;
+  width: 100%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.history_container {
+  margin: 10px 0 80px;
+}
+
+.history_container h5 {
+  font-size: 1.1rem;
+}
+
+.view_btn {
+  border-radius: 5px;
+  border: none;
+  outline: 1px solid #233885;
+  background-color: transparent;
+  font-weight: 400;
+}
+
+/* pagination css */
+.pagination-container {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+}
+
+.pagination-item {
+  padding: 0 12px;
+  height: 32px;
+  text-align: center;
+  /* margin: auto 4px; */
+  margin: -25px 2px;
+  color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  letter-spacing: 0.01071em;
+  border-radius: 16px;
+  line-height: 1.43;
+  font-size: 13px;
+  min-width: 32px;
+  border: none;
+  background-color: transparent;
+  color: #233885;
+}
+
+.dots:hover {
+  background-color: transparent;
+  cursor: default;
+}
+
+.pagination-item:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+}
+
+.pagination-item.selected {
+  background-color: #233885;
+  color: #fff;
+}
+
+/* .pagination-item .arrow { */
+.arrow::before {
+  position: relative;
+  /* top: 3pt; Uncomment this to lower the icons as requested in comments */
+  content: "";
+  /* By using an em scale, the arrows will size with the font */
+  display: inline-block;
+  width: 0.4em;
+  height: 0.4em;
+  border-right: 0.12em solid rgba(0, 0, 0, 0.87);
+  border-top: 0.12em solid rgba(0, 0, 0, 0.87);
+}
+
+.arrow.left {
+  transform: rotate(-135deg) translate(-50%);
+}
+
+.arrow.right {
+  transform: rotate(45deg);
+}
+
+.arrow.disabled {
+  pointer-events: none;
+}
+
+.arrow::before {
+  border-right: 0.12em solid rgba(0, 0, 0, 0.43);
+  border-top: 0.12em solid rgba(0, 0, 0, 0.43);
+}
+
+.arrow:hover {
+  background-color: transparent;
+  cursor: default;
+}
+
+/* wallet style */
+.wallet_bottom {
+  margin-bottom: 80px;
+}
+.balance_container {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background-color: #fff;
+  color: #233885;
+}
+
+.balance_container h5 {
+  margin-top: -10px;
+}
+.balance_container p {
+  font-size: 1rem;
+}
+
+.funding {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.16);
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.funding_sm {
+  background-color: #fff;
+  width: 100%;
+  /* height: 45vh; */
+  padding: 10px 0;
+}
+
+.funding_child {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  padding: 10px;
+  text-align: center;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+.funding_child a {
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.cancel {
+  background-color: transparent;
+  outline: 1px solid red;
+  color: red;
+  border: none;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  margin: 15px 0 0 auto;
+  padding: 2px 10px;
+  display: block;
+}
+
+.cancel:hover {
+  outline: 1px solid red;
+  color: #fff;
+  background-color: red;
+}
+
+.account_details {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background-color: #fff;
+  padding: 20px 10px;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.account_details a {
+  background-color: #43d854;
+  border-radius: 5px;
+  color: #fff;
+  display: block;
+  border: none;
+  padding: 6px 15px;
+  text-decoration: none;
+}
+
+.account_details h6 {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.manual_form {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background-color: #fff;
+  padding: 20px 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+.manual_under {
+  margin-bottom: 80px;
+}
+
+.text_small {
+  margin-top: -2px;
+  display: block;
+  font-size: 0.7rem;
+}
+
+.manual_text {
+  font-size: 0.8rem;
+}
+
+.manual_header {
+  margin: 20px 0;
+  text-align: center;
+}
+.manual_header h5 {
+  font-size: 1rem;
+}
