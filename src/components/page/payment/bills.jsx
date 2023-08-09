@@ -73,10 +73,16 @@ export default function Bills() {
                 <div className="col">
                   <MySelect name="discoName">
                     <option value="">Disco Name</option>
-                    <option value="1">MTN</option>
-                    <option value="2">GLO</option>
-                    <option value="3">AIRTEL</option>
-                    <option value="4">9MOBILE</option>
+                    <option value="1">Abuja Electricity</option>
+                    <option value="2">Eko Electricity</option>
+                    <option value="3">Enugu Electricity</option>
+                    <option value="4">Ibadan Electricity</option>
+                    <option value="5">Ikeja Electricity</option>
+                    <option value="6">Jos Electricity</option>
+                    <option value="7">Kano Electricity</option>
+                    <option value="8">Kaduna Electricity</option>
+                    <option value="9">Port Harcourt Electricity</option>
+                    <option value="10">Yola Electricity</option>
                   </MySelect>
                 </div>
 
@@ -92,9 +98,8 @@ export default function Bills() {
                 <div className="col">
                   <MySelect name="meterType">
                     <option value="">Meter Type</option>
-                    <option value="1">CORPORATE GIFTING</option>
-                    <option value="2">GIFTING</option>
-                    <option value="3">SME</option>
+                    <option value="1">Prepaid</option>
+                    <option value="2">Postpaid</option>
                   </MySelect>
                 </div>
 

@@ -150,12 +150,18 @@ export default function Data() {
                     onChange={changeHandler}
                   >
                     <option value="">Plan</option>
-                    {dataPlan.map(({ id, name, price }) => (
-                      <option value={price} key={id}>
-                        {name} =&gt; &#8358;
-                        {price}
-                      </option>
-                    ))}
+                    {dataPlan.map(({ id, name, price }) =>
+                      name !== "" ? (
+                        <option value={price} key={id}>
+                          {name} =&gt; &#8358;
+                          {price}
+                        </option>
+                      ) : (
+                        <option value={price} key={id}>
+                          {price}
+                        </option>
+                      )
+                    )}
                   </select>
                 </div>
               </div>

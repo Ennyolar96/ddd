@@ -74,7 +74,7 @@ export default function Cable() {
               <div className="col">
                 <div className="form-group">
                   <input
-                    type="number"
+                    type="text"
                     name="iuc"
                     placeholder="IUC/Smart Card Number"
                     className="input_field"
@@ -86,12 +86,16 @@ export default function Cable() {
               <div className="col">
                 <div className="form-group">
                   <select name="" id="" className="input_field">
-                    {cable.map(({ id, name, price }) => (
-                      <option key={id}>
-                        {name}
-                        {price}
-                      </option>
-                    ))}
+                    <option value="">Plan</option>
+                    {cable.map(({ id, name, price }) =>
+                      price !== "" ? (
+                        <option key={id}>
+                          {name} =&gt; &#8358;{price}
+                        </option>
+                      ) : (
+                        <option key={id}>{name}</option>
+                      )
+                    )}
                   </select>
                 </div>
               </div>
