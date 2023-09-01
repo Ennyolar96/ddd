@@ -1,0 +1,53 @@
+.circle {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 50px;
+  border: 1px solid #06152f;
+  border-radius: 50%;
+}
+
+.circle_sm {
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background-color: #06152f;
+  border-radius: 50px;
+  margin: -5px 0 0 60px;
+  padding: 5px;
+}
+
+.circle_sm_sm {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+}
+
+.circle-last {
+  background-color: #fff;
+  width: 5px;
+  height: 5px;
+  border-radius: 50px;
+  display: block;
+  margin: 11px auto 0;
+}
+
+.balance {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.balance p {
+  font-size: 0.8rem;
+}
+.balance h5 {
+  font-size: 1.5rem;
+}

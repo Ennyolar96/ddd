@@ -44,10 +44,28 @@
 }
 
 .my-class-name {
-  width: 70%;
-  height: 40px;
+  width: 30%;
+  height: 70px;
   display: block;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 1114px) {
+  .my-class-name {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .my-class-name {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .my-class-name {
+    width: 90%;
+  }
 }
 
 .notify_container {

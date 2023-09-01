@@ -2,6 +2,7 @@ import { useState } from "react";
 import Confirm from "../../helper/confirm";
 import { Product } from "../../nav/header";
 import { dValue, ds_tv, go_tv, star_time } from "../../utils/cable_data";
+import Balance from "../../utils/balance";
 
 export default function Cable() {
   const [form, setForm] = useState({});
@@ -12,16 +13,17 @@ export default function Cable() {
   const changeHandler = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
     if (e.target.name === "cableType") {
+      console.log(e.target.value);
       switch (e.target.value) {
-        case "GOTV":
+        case "1":
           setCable(go_tv);
           break;
 
-        case "DSTV":
+        case "2":
           setCable(ds_tv);
           break;
 
-        case "Startime":
+        case "3":
           setCable(star_time);
           break;
 
@@ -54,6 +56,8 @@ export default function Cable() {
       )}
       <div className={PathName === "/cables-sub" ? "airtime_container" : ""}>
         <div className={PathName === "/cables-sub" ? "container" : ""}>
+          <Balance />
+
           <form onSubmit={onSubmitHandler}>
             <div className="row row-cols-md-2 row-cols-sm-1 row-cols-1">
               <div className="col">
@@ -64,9 +68,9 @@ export default function Cable() {
                     onChange={changeHandler}
                   >
                     <option value="">Cable Type</option>
-                    <option value="GOTV">GOTV</option>
-                    <option value="DSTV">DSTV</option>
-                    <option value="Startime">STARTIME</option>
+                    <option value="1">GOTV</option>
+                    <option value="2">DSTV</option>
+                    <option value="3">STARTIME</option>
                   </select>
                 </div>
               </div>
@@ -89,7 +93,7 @@ export default function Cable() {
                     <option value="">Plan</option>
                     {cable.map(({ id, name, price }) =>
                       price !== "" ? (
-                        <option key={id}>
+                        <option value={id} key={id}>
                           {name} =&gt; &#8358;{price}
                         </option>
                       ) : (

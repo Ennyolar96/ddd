@@ -25,7 +25,7 @@ export default function Confirm({ setConfirm, confirm, form, purchase }) {
           <h6 className="line_text">You Are About To Pay</h6>
           <p>Authorize the Transaction</p>
           <MuiOtpInput
-            length={4}
+            length={5}
             onComplete={handleComplete}
             value={value}
             onChange={handleChange}

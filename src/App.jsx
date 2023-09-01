@@ -18,6 +18,7 @@ import Referral from "./components/page/other/referral";
 import Login from "./components/page/auth/login.jsx";
 import Register from "./components/page/auth/register";
 import FlashScreen from "./components/nav/flashScreen";
+import NotFound from "./components/page/NotFound";
 
 function App() {
   const loc = window.location.pathname;
@@ -44,6 +45,7 @@ function App() {
         <Route path="/cables-sub" element={<Cable />} />
         <Route path="/electricity-bills" element={<Bills />} />
         <Route path="/referral" element={<Referral />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       {loc === "/" || loc === "/login" || loc === "/register" ? "" : <Footer />}
     </>

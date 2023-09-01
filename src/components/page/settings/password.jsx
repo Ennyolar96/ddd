@@ -2,7 +2,7 @@ import { Form, Formik } from "formik";
 import { MyTextInput } from "../../utils/input";
 import * as Yup from "yup";
 
-export default function Pin() {
+export default function Password() {
   const submitHandle = (value) => {
     console.log(value);
   };

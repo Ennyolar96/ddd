@@ -63,7 +63,7 @@ export const Product = ({ productName }) => {
       <div className={style.header_container}>
         <div className="d-flex">
           <div className={style.image_container}>
-            <Link to="/">
+            <Link to="/dashboard">
               <FaAngleLeft />
               {productName}
             </Link>

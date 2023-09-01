@@ -4,6 +4,7 @@ import { MySelect, MyTextInput } from "../../utils/input";
 import { useState } from "react";
 import Confirm from "../../helper/confirm";
 import { Product } from "../../nav/header";
+import Balance from "../../utils/balance";
 
 export default function Bills() {
   const [confirm, setConfirm] = useState(false);
@@ -35,6 +36,8 @@ export default function Bills() {
         className={PathName === "/electricity-bills" ? "airtime_container" : ""}
       >
         <div className={PathName === "/electricity-bills" ? "container" : ""}>
+          <Balance />
+
           <Formik
             initialValues={{
               discoName: "",

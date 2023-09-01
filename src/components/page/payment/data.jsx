@@ -10,6 +10,7 @@ import {
   MtnGifting,
   MtnSme,
 } from "../../utils/network_data";
+import Balance from "../../utils/balance";
 
 export default function Data() {
   const [confirm, setConfirm] = useState(false);
@@ -88,7 +89,8 @@ export default function Data() {
       {PathName === "/buy-data" ? <Product productName="Data" /> : ""}
       <div className={PathName === "/buy-data" ? "airtime_container" : ""}>
         <div className={PathName === "/buy-data" ? "container" : ""}>
-          <marquee direction="left">All Data&apos;s Valid For 30Days</marquee>
+          <Balance />
+          {/* <marquee direction="left">All Data&apos;s Valid For 30Days</marquee> */}
 
           <form onSubmit={submitHandle}>
             <div className="row row-cols-md-2 row-cols-sm-1 row-cols-1">
@@ -104,7 +106,7 @@ export default function Data() {
                     <option value="1">MTN</option>
                     <option value="2">Glo</option>
                     <option value="3">Airtel</option>
-                    <option value="4">9Mobile</option>
+                    <option value="6">9Mobile</option>
                   </select>
                 </div>
               </div>
@@ -152,7 +154,7 @@ export default function Data() {
                     <option value="">Plan</option>
                     {dataPlan.map(({ id, name, price }) =>
                       name !== "" ? (
-                        <option value={price} key={id}>
+                        <option value={id} key={id}>
                           {name} =&gt; &#8358;
                           {price}
                         </option>

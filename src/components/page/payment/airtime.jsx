@@ -5,6 +5,7 @@ import Confirm from "../../helper/confirm";
 import { useState } from "react";
 import "./style.css";
 import { Product } from "../../nav/header";
+import Balance from "../../utils/balance";
 
 export default function Airtime() {
   const [confirm, setConfirm] = useState(false);
@@ -30,6 +31,8 @@ export default function Airtime() {
       {PathName === "/airtime" ? <Product productName="Airtime" /> : ""}
       <div className={PathName === "/airtime" ? "airtime_container" : ""}>
         <div className={PathName === "/airtime" ? "container" : ""}>
+          <Balance />
+
           <Formik
             initialValues={{
               networkType: "",
@@ -58,7 +61,7 @@ export default function Airtime() {
             }}
           >
             <Form>
-              <div className="row row-cols-md-2 row-cols-sm-1 row-cols-1">
+              <div className="row row-cols-lg-2 row-cols-md-1 row-cols-sm-1 row-cols-1">
                 <div className="col">
                   <MySelect name="networkType">
                     <option value="">Network</option>

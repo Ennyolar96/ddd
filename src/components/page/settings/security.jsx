@@ -1,8 +1,8 @@
 import { Form, Formik } from "formik";
 import { MyTextInput } from "../../utils/input";
 import * as Yup from "yup";
-import Pin from "./pin";
 import { Product } from "../../nav/header";
+import Password from "./password";
 
 export default function Security() {
   const submitHandle = (value) => {
@@ -15,7 +15,7 @@ export default function Security() {
         <Product productName="Edit Profile" />
         <div className="container">
           <div className="user_profile_container">
-            <h5>Change Password</h5>
+            <h5>Change Transaction Pin</h5>
             <Formik
               initialValues={{
                 oldPin: "",
@@ -94,7 +94,7 @@ export default function Security() {
             </Formik>
           </div>
         </div>
-        <Pin />
+        <Password />
       </div>
     </>
   );
